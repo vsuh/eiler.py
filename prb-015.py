@@ -8,5 +8,11 @@ https://projecteuler.net/problem=15
 Сколько существует таких маршрутов в сетке 20×20?
 
 """
-# solving ..
+# solving ..(137846528820)
+def combinator(num):
+    import math
+    return math.factorial(2 * num) / (math.factorial(num) * math.factorial(num))
+    # 2N! / (N! * N!)
 
+
+print(combinator(20))

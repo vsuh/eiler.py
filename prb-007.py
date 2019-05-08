@@ -1,7 +1,7 @@
 # VSCraft
 #
 """
-https://projecteuler.net/problem=6
+https://projecteuler.net/problem=7
  Cумма квадратов первых десяти натуральных чисел равна
  12 + 22 + ... + 102 = 385
  Квадрат суммы первых десяти натуральных чисел равен

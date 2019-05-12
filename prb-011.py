@@ -32,8 +32,10 @@ https://projecteuler.net/problem=11
 расположенных в любом направлении (вверх, вниз, вправо, влево или по диагонали)?
 
 """
-# solving ..
 
+# solved 12.05.2019 18:33 (70600674)
+
+from colorama import Fore, Back, Style
 
 tskstr = "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08 \
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00 \
@@ -57,17 +59,86 @@ tskstr = "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08 \
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"
 
 
-def shuffle_arr(prm_str):
+def prepare_arr(prm_str):
     tmp = list(tskstr.split(' '))
     tmp = [int(i) for i in tmp]
-    
-    for col in range(0,20):
-        for row in range(0, 20):
-            pass
-    return list('1,2')
+    return tmp
 
 
-# sffl = shuffle_arr(tskstr)
-# rows = sffl[0]
-# cols = sffl[1]
-print(tmp)
+def gor(arr):
+    ret = {'name': 'Horizontal  ', 'max': '', 'list': '', 'coord': ''}
+    ii = 0
+    for row in range(0, 20):
+        for col in range(0, 17):
+            tt = arr[row*20+col:row*20+col+4]
+            mx = 1
+            for n in tt:
+                mx *= n
+            if mx > ii:
+                ii = mx
+                ret['max'] = mx
+                ret['list'] = tt
+                ret['coord'] = [row+1, col+1]
+            # print('{}[{}:{}]{} {}{}'.format(Fore.BLUE, row+1, col+1, Fore.YELLOW, tt, Style.RESET_ALL))
+    return ret
+
+
+def vrt(arr):
+    ret = {'name': 'Vertical    ', 'max': '', 'list': '', 'coord': ''}
+    ii = 0
+    for row in range(0, 17):
+        for col in range(0, 20):
+            tt = arr[row*20+col:row*20+col+80:20]
+            mx = 1
+            for n in tt:
+                mx *= n
+            if mx > ii:
+                ii = mx
+                ret['max'] = mx
+                ret['list'] = tt
+                ret['coord'] = [row+1, col+1]
+            # print('{}[{}:{}]{} {}{}'.format(Fore.BLUE, row+1, col+1, Fore.YELLOW, tt, Style.RESET_ALL))
+    return ret
+
+
+def dg1(arr):
+    ret = {'name': 'Diag. right ', 'max': '', 'list': '', 'coord': ''}
+    ii = 0
+    for row in range(0, 17):
+        for col in range(0, 17):
+            tt = arr[row*20+col:row*20+col+84:21]
+            mx = 1
+            for n in tt:
+                mx *= n
+            if mx > ii:
+                ii = mx
+                ret['max'] = mx
+                ret['list'] = tt
+                ret['coord'] = [row+1, col+1]
+            # print('{}[{}:{}]{} {}{}'.format(Fore.BLUE, row+1, col+1, Fore.YELLOW, tt, Style.RESET_ALL))
+    return ret
+
+def dg2(arr):
+    ret = {'name': 'Diag. left  ', 'max': '', 'list': '', 'coord': ''}
+    ii = 0
+    for row in range(0, 17):
+        for col in range(3, 20):
+            tt = arr[row*20+col:row*20+col+76:19]
+            mx = 1
+            for n in tt:
+                mx *= n
+            if mx > ii:
+                ii = mx
+                ret['max'] = mx
+                ret['list'] = tt
+                ret['coord'] = [row+1, col+1]
+            # print('{}[{}:{}]{} {}{}'.format(Fore.BLUE, row+1, col+1, Fore.YELLOW, tt, Style.RESET_ALL))
+    return ret
+
+
+sffl = prepare_arr(tskstr)
+
+print(gor(sffl))
+print(vrt(sffl))
+print(dg1(sffl))
+print(dg2(sffl))

@@ -51,8 +51,8 @@ while cnt:
     ss += ii
     dvs = cont(ss)
     if dvs > 500:
-        print(ii, ss, dvs)
+        print(time.strftime('%H:%M:%S'), ii, ss, dvs)
         cnt = False
-    if ii % 10000 == 0:
+    if ii % 1000 == 0:
         print(time.strftime('%H:%M:%S'), ii, ss, dvs)
 

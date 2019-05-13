@@ -23,46 +23,36 @@ https://projecteuler.net/problem=12
 
 """
 # solving ..
+
 import math
 import time
-from colorama import Fore, Style
-from typing import List, Any
 
-DIVS = 50
 
-def divisors(n):
-    large_divs = []
-    for i in range(1, 1+int(math.sqrt(n))):
+def divisorGenerator(n):
+    large_divisors = []
+    for i in range(1, int(math.sqrt(n) + 1)):
         if n % i == 0:
             yield i
-            if i * i != n:
-                large_divs.append(n / i)
-    for div in reversed(large_divs):
-        yield div
+            if i*i != n:
+                large_divisors.append(n / i)
+    for divisor in reversed(large_divisors):
+        yield int(divisor)
 
-def count_divs(ss):
-    dividers = 0
-    # print(ss, ':', end=' ')
-    for i in range(int(ss/2)+1, 1, -1):
-        if ss % i == 0:
-            dividers += 1
-            # print(i, end=' ')
-    # print('')
-    return dividers
 
-#
-cnt = True
-ii = 0
+def cont(org_num):
+    return len(list(divisorGenerator(org_num)))
+
+
+ii =0
 ss = 0
+cnt = True
 while cnt:
     ii += 1
-    ss = ss + ii
-    ee = list(divisors(ss))
-    if len(ee) >= DIVS:
-        cnt = True
-    if ii == 2 or ii % 10000 == 0:
-        print(time.strftime('%H:%M:%S'), ii, ':', ss, '\\\\', len(ee))
-else:
-    print('number {}{}{} has more than 500 divisors ({}) : {}'.format(Fore.LIGHTYELLOW_EX, ss, Fore.RESET, len(ee), list(ee)))
+    ss += ii
+    dvs = cont(ss)
+    if dvs > 500:
+        print(ii, ss, dvs)
+        cnt = False
+    if ii % 10000 == 0:
+        print(time.strftime('%H:%M:%S'), ii, ss, dvs)
 
-# print(list(divisors(100000000)))

@@ -1,7 +1,9 @@
 # VSCraft
 #
 """
-https://projecteuler.net/problem=9
+задача:  https://projecteuler.net/problem=9
+перевод: http://euler.jakumo.org/problems/view/9.html
+
 Тройка Пифагора - три натуральных числа a < b < c, для которых выполняется равенство
 
 a^2 + b^2 = c^2

@@ -1,7 +1,9 @@
 # VSCraft
 #
 """
-https://projecteuler.net/problem=12
+задача:  https://projecteuler.net/problem=12
+перевод: http://euler.jakumo.org/problems/view/12.html
+
 Последовательность треугольных чисел образуется путем сложения натуральных чисел. К примеру, 7-ое треугольное
 число равно 1 + 2 + 3 + 4 + 5 + 6 + 7 = 28. Первые десять треугольных чисел:
 

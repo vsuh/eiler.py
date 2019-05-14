@@ -1,7 +1,8 @@
 # VSCraft
 #
 """
-https://projecteuler.net/problem=14
+задача:  https://projecteuler.net/problem=14
+перевод: http://euler.jakumo.org/problems/view/14.html
 
 Следующая повторяющаяся последовательность определена для множества натуральных чисел:
 

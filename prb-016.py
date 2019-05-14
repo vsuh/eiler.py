@@ -1,7 +1,8 @@
 # VSCraft
 #
 """
-https://projecteuler.net/problem=16
+задача:  https://projecteuler.net/problem=16
+перевод: http://euler.jakumo.org/problems/view/16.html
 
 
 

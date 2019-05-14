@@ -1,14 +1,16 @@
 # VSCraft
 #
 """
-https://projecteuler.net/problem=7
+задача:  https://projecteuler.net/problem=7
+перевод: http://euler.jakumo.org/problems/view/7.html
+
 Выписав первые шесть простых чисел, получим 2, 3, 5, 7, 11 и 13. Очевидно, что 6-ое простое число - 13.
 Какое число является 10001-ым простым числом?
 """
 # solved 08.05.2019 14:13 (104743)
 
 n = 2000000
-lst=[2]
+lst = [2]
 for i in range(3, n+1, 2):
     if i % 10001 == 0:
         print('{}/{}'.format(i, len(lst)))

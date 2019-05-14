@@ -1,7 +1,9 @@
 # VSCraft
 #
 """
-https://projecteuler.net/problem=15
+задача:  https://projecteuler.net/problem=15
+перевод: http://euler.jakumo.org/problems/view/15.html
+
 Начиная в левом верхнем углу сетки 2×2 и имея возможность двигаться только вниз или вправо, существует
 ровно 6 маршрутов до правого нижнего угла сетки.
 
@@ -11,7 +13,7 @@ https://projecteuler.net/problem=15
 # solved 08.05.2019 14:12 ..(137846528820)
 def combinator(num):
     import math
-    return math.factorial(2 * num) / (math.factorial(num) * math.factorial(num))
+    return int(math.factorial(2 * num) / (math.factorial(num) * math.factorial(num)))
     # 2N! / (N! * N!)
 
 

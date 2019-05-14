@@ -1,7 +1,8 @@
 # VSCraft
 #
 """
-https://projecteuler.net/problem=11
+задача:  https://projecteuler.net/problem=11
+перевод: http://euler.jakumo.org/problems/view/11.html
 
 В таблице 20×20 (внизу) четыре числа на одной диагонали выделены красным.
 

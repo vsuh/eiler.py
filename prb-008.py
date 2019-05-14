@@ -1,7 +1,9 @@
 # VSCraft
 #
 """
-https://projecteuler.net/problem=8
+задача:  https://projecteuler.net/problem=8
+перевод: http://euler.jakumo.org/problems/view/8.html
+
 Наибольшее произведение четырех последовательных цифр в нижеприведенном 1000-значном числе равно 9 × 9 × 8 × 9 = 5832.
 
 73167176531330624919225119674426574742355349194934

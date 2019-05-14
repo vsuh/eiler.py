@@ -1,7 +1,7 @@
 # VSCraft
-#
 """
-https://projecteuler.net/problem=13
+задача:  https://projecteuler.net/problem=13
+перевод: http://euler.jakumo.org/problems/view/13.html
 
 Найдите первые десять цифр суммы следующих ста 50-значных чисел.
 

@@ -1,7 +1,10 @@
 # VSCraft
 #
 """
-https://projecteuler.net/problem=6
+
+задача:  https://projecteuler.net/problem=6
+перевод: http://euler.jakumo.org/problems/view/6.html
+
  Cумма квадратов первых десяти натуральных чисел равна
  12 + 22 + ... + 102 = 385
  Квадрат суммы первых десяти натуральных чисел равен
